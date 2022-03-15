@@ -29,7 +29,7 @@ const styles = {
 		background: '#bdc3c7'
 	},
 	bmMenu: {
-		background: '#a6b691',
+		background: 'white',
 		padding: '2.5em 1.5em 0',
 		fontSize: '1.15em'
 	},

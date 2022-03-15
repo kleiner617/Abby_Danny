@@ -7,8 +7,8 @@ type Props = {
 };
 
 const HeartImg = styled('img')`
-	height: 90px;
-	width: 90px;
+	height: 64px;
+	width: 64px;
 	margin-top: -10px;
 `;
 
@@ -52,7 +52,10 @@ const StickyHeader = ({ visibleSection, scrollToHome }: Props) => {
 				</Link>
 
 				<Link smooth to="/">
-					<HeartImg src={require('../../Content/Images/A-D_navy.png')} onClick={scrollToHome}></HeartImg>
+					<HeartImg
+						src={require('../../Content/Images/A-D_frenchBlue.png')}
+						onClick={scrollToHome}
+					></HeartImg>
 				</Link>
 
 				<Link smooth to="/#thingsToDo">

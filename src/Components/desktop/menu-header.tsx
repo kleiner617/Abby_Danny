@@ -8,64 +8,77 @@ type Props = {
 	scrollToHome?: any;
 };
 
-const TopHeader = styled('div')`
-	position: absolute;
-	margin-top: 10px;
+const HeaderStyle = styled('div')`
+	display: flex;
 	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 5vh;
+`;
+
+const TopHeader = styled('div')`
+	font-size: 16px;
+	font-weight: 300;
+	display: flex;
 	margin: auto;
-	z-index: 9;
 `;
 const TopHeaderButton = styled('div')`
-	display: inline-block;
 	color: black;
-	font-weight: bold;
-	font-size: 24px;
 	padding: 0 40px;
 	cursor: pointer;
+	margin: auto;
 	:hover {
 		color: #081090;
 	}
 `;
 
-const HeartImg = styled('img')`
-	height: 90px;
-	width: 90px;
-	margin-top: -10px;
+const LineDec = styled('div')`
+	padding-left: 4vw;
+	border: solid 0.5px grey;
+	margin: auto;
+	height: 0px;
+	width: 10%;
+`;
+
+const Filler = styled('div')`
+	width: 7%;
+`;
+
+const StyledLink = styled(Link)`
+	margin: auto;
 `;
 
 const MenuHeader = (props: Props) => {
 	return (
-		<div>
+		<HeaderStyle>
+			<Filler />
+			<LineDec />
 			<TopHeader>
-				<Link to="/#schedule" smooth>
-					<TopHeaderButton className="top-button">Schedule</TopHeaderButton>
-				</Link>
-				<Link to="/#travel" smooth>
-					<TopHeaderButton className="top-button">Travel</TopHeaderButton>
-				</Link>
-				<Link to="/#accomodations" smooth>
-					<TopHeaderButton className="top-button">Accomodations</TopHeaderButton>{' '}
-				</Link>
-				<Link to="/" smooth>
-					<HeartImg
-						src={require('../../Content/Images/A-D_navy.png')}
-						onClick={props.scrollToHome}
-					></HeartImg>
-				</Link>
+				<StyledLink to="/#home" smooth>
+					<TopHeaderButton className="top-button">HOME</TopHeaderButton>{' '}
+				</StyledLink>
+				<StyledLink to="/#schedule" smooth>
+					<TopHeaderButton className="top-button">SCHEDULE</TopHeaderButton>
+				</StyledLink>
+				<StyledLink to="/#travel" smooth>
+					<TopHeaderButton className="top-button">TRAVEL</TopHeaderButton>
+				</StyledLink>
 
-				<Link to="/#thingsToDo" smooth>
-					<TopHeaderButton className="top-button">Things To Do</TopHeaderButton>{' '}
-				</Link>
+				<StyledLink to="/#thingsToDo" smooth>
+					<TopHeaderButton className="top-button">THINGS TO DO</TopHeaderButton>{' '}
+				</StyledLink>
 
-				<Link to="/#faq" smooth>
+				<StyledLink to="/#faq" smooth>
 					<TopHeaderButton className="top-button">FAQ</TopHeaderButton>{' '}
-				</Link>
+				</StyledLink>
 
-				<Link to="/#registry" smooth>
-					<TopHeaderButton className="top-button">Registry</TopHeaderButton>{' '}
-				</Link>
+				<StyledLink to="/#registry" smooth>
+					<TopHeaderButton className="top-button">REGISTRY</TopHeaderButton>{' '}
+				</StyledLink>
 			</TopHeader>
-		</div>
+			<LineDec />
+			<Filler />
+		</HeaderStyle>
 	);
 };
 export default MenuHeader;
