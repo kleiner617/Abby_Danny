@@ -17,7 +17,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 				<Carousel>
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/EH_long_1.jpg')}
+							src={require('../../Content/Images/AD_Long_1.jpg')}
 							alt="placeholder1"
 							style={{
 								width: '100%'
@@ -27,7 +27,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/EH_wedding_long_1.jpg')}
+							src={require('../../Content/Images/AD_Long_2.jpg')}
 							alt="placeholder1"
 							style={{
 								width: '100%'
@@ -37,52 +37,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/EH_long_2.jpg')}
-							alt="placeholder1"
-							style={{
-								width: '100%'
-							}}
-						/>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							src={require('../../Content/Images/EH_wedding_long_2.jpg')}
-							alt="placeholder1"
-							style={{
-								width: '100%'
-							}}
-						/>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							src={require('../../Content/Images/EH_long_4.jpg')}
-							alt="placeholder1"
-							style={{
-								width: '100%'
-							}}
-						/>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							src={require('../../Content/Images/EH_wedding_long_3.jpg')}
-							alt="placeholder1"
-							style={{
-								width: '100%'
-							}}
-						/>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							src={require('../../Content/Images/EH_long_5.jpg')}
-							alt="placeholder1"
-							style={{
-								width: '100%'
-							}}
-						/>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							src={require('../../Content/Images/EH_wedding_long_4.jpg')}
+							src={require('../../Content/Images/AD_Long_3.jpg')}
 							alt="placeholder1"
 							style={{
 								width: '100%'

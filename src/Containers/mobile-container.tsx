@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 import PhotoHeader from '../Components/mobile/photo-header-mobile';
-import DetailsContainer from './details-container';
+import DetailsContainer from './things-to-do-container';
 import RegistryContainer from './registry-container';
 import ScheduleContainer from './schedule-container';
 import MobileNavMenu from '../Components/mobile/mobile-nav-menu';
-import GettingThereContainer from './getting-there-container';
+import GettingThereContainer from './travel-container';
 import COVIDContainer from './faq-container';
 import NameHeaderMobile from '../Components/mobile/name-header-mobile';
 import Footer from '../Components/footer';

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import Registry from '../Content/Images/SectionHeaders/registry_header.svg';
 
 type Props = {
 	className?: string;
@@ -8,8 +9,12 @@ type Props = {
 };
 
 const RegistryDetails = styled('div')`
-	padding: ${(props: Props): string => (props.isMobile ? `30px 0` : '60px 0')};
-	background: #f0f3ed;
+margin-top:
+	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
+`;
+
+const TitleImage = styled.img`
+	height: 150px;
 `;
 
 const Title = styled('div')`
@@ -64,7 +69,7 @@ export class RegistryContainer extends React.PureComponent<Props> {
 	render() {
 		return (
 			<RegistryDetails className={this.props.className} id={this.props.id}>
-				<Title {...this.props}>Registry</Title>
+				<TitleImage src={Registry} alt="Registry" />
 				<StandAloneZola
 					src={require('../Content/Images/logos/Zola-Logo.png')}
 					onClick={() => {

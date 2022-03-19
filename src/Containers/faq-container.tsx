@@ -1,5 +1,8 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import FAQ from '../Content/Images/SectionHeaders/faq_header.svg';
+import SampleBorder from '../Content/Images/SampleBorder.svg';
+import Heart from '../Content/Images/heart.svg';
 
 type Props = {
 	className?: string;
@@ -7,57 +10,41 @@ type Props = {
 	isMobile?: boolean;
 };
 
+const SampleBorderStyle = styled.img`
+	height: 100px;
+	width: 50%;
+	margin-top: 100px;
+`;
+const TitleImage = styled.img`
+	height: 150px;
+	margin-bottom: 40px;
+`;
+
+const HeartImage = styled.img`
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 70px;
+`;
 const FAQDetails = styled('div')`
-	padding: ${(props: Props): string => (props.isMobile ? `20px 0` : '40px 0')};
+	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
+	// background-color: rgb(0, 114, 187, 0.2);
 `;
 
-const Title = styled('div')`
-	font-size: ${(props: Props): string => (props.isMobile ? `42px` : '70px')};
-	margin-top: 40px;
-	padding: ${(props: Props): string => (props.isMobile ? `15px 0` : '30px 0')};
-	font-family: 'Pinyon Script', cursive;
+const QuestionStyle = styled('div')`
+	width: 50%;
+	font-size: 30px;
+	margin: 20px;
+	// width: ${(props: Props): string => (props.isMobile ? '85%' : '70%')};
+	margin: auto;
+	font-weight: bold;
+	margin-bottom: 20px;
 `;
-
-const Details = styled('div')`
+const AnswerStyle = styled('div')`
+	width: 40%;
 	font-size: 24px;
 	margin: 20px;
-	width: ${(props: Props): string => (props.isMobile ? '85%' : '70%')};
+	// width: ${(props: Props): string => (props.isMobile ? '85%' : '70%')};
 	margin: auto;
-`;
-
-const DetailsTitle = styled('div')`
-	font-size: ${(props: Props): string => (props.isMobile ? '30px' : '50px')};
-	font-family: 'Cormorant Garamond', serif;
-`;
-
-const AtText = styled('p')`
-	font-size: ${(props: Props): string => (props.isMobile ? '20px' : '30px')};
-	margin: 0;
-	line-height: ${(props: Props): string => (props.isMobile ? '15px' : '20px')};
-`;
-const DetailsText = styled('p')`
-	font-size: ${(props: Props): string => (props.isMobile ? '24px' : '36px')};
-	margin: 0;
-`;
-const SubDetailsText = styled('p')`
-	font-size: ${(props: Props): string => (props.isMobile ? '20px' : '30px')};
-	margin: 0;
-`;
-
-const ImageHolder = styled('div')``;
-
-const CircleImage = styled('img')`
-	margin-top: 30px;
-	border-radius: 50%;
-	height: ${(props: Props): string => (props.isMobile ? '250px' : '500px')};
-	width: ${(props: Props): string => (props.isMobile ? '250px' : '500px')};
-`;
-const FloralImage = styled('img')`
-	height: ${(props: Props): string => (props.isMobile ? '279px' : '557px')};
-	width: ${(props: Props): string => (props.isMobile ? '303px' : '601px')};
-	position: absolute;
-	margin-top: ${(props: Props): string => (props.isMobile ? '25px' : '19px')};
-	margin-left: ${(props: Props): string => (props.isMobile ? '-283px' : '-565px')};
 `;
 
 export class COVIDContainer extends React.PureComponent<Props> {
@@ -69,29 +56,27 @@ export class COVIDContainer extends React.PureComponent<Props> {
 	render() {
 		return (
 			<FAQDetails className={this.props.className} id={this.props.id}>
-				{/* <ImageHolder>
-          <CircleImage
-            src={require("../Content/Images/circle_1.jpg")}
-            {...this.props}
-          ></CircleImage>
-          <FloralImage
-            src={require("../Content/Images/florals-6.png")}
-            {...this.props}
-          ></FloralImage>
-        </ImageHolder> */}
+				<TitleImage src={FAQ} alt="FAQ" />
 
-				<Title {...this.props}>FAQ</Title>
-				{/* <Details {...this.props}>
-					<p>
-						We are taking COVID-19 very seriously and will continue to monitor the regulations and guidlines
-						put in place by the CDC and govenor of Virginia
-					</p>
-					<p />
-					<p>
-						Feel free to reach out to Heather or Emily if you would like more information on the precautions
-						we are taking!
-					</p>
-				</Details> */}
+				<QuestionStyle>Will there be transportation to and from the ceremony and reception?</QuestionStyle>
+				<AnswerStyle>
+					Transportation will not be provided between the ceremony and reception. For out of town guests
+					staying at the Jefferson or the Graduate, the Cathedral is a 10 minute walk (0.4 miles). Richmond is
+					also very accessible by Uber and Lyft. For guests driving themselves, there are several parking
+					garages plus street parking near the Cathedral. Valet will also be available at the Jefferson
+					beginning at 5pm.
+				</AnswerStyle>
+				<HeartImage src={Heart} />
+				<QuestionStyle>What should we do in between the ceremony and the reception?</QuestionStyle>
+				<AnswerStyle>
+					Because the Cathedral will be holding Saturday evening mass, our ceremony ends at 3pm, leaving a two
+					hour window before cocktail hour. Richmond has lots of fun restaurants and bars where you can get a
+					quick snack or drink before joining us at 5pm. See our 'Things to Do' tab for more ideas!
+				</AnswerStyle>
+				<HeartImage src={Heart} />
+				<QuestionStyle>What should I wear?</QuestionStyle>
+				<AnswerStyle>The dress code for our wedding is Black-Tie Optional.</AnswerStyle>
+				{/* <SampleBorderStyle src={SampleBorder} alt="Schedule" /> */}
 			</FAQDetails>
 		);
 	}

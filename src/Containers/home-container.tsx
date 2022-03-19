@@ -5,11 +5,11 @@ import React, { useRef, useEffect, useState } from 'react';
 // Schedule, travel, things to do, faq, registry
 import PhotoHeader from '../Components/desktop/photo-header-large';
 import ScheduleContainer from './schedule-container';
-import TravelContainer from '../Containers/getting-there-container';
-import ThingsToDoContainer from './details-container';
+import TravelContainer from './travel-container';
+import ThingsToDoContainer from './things-to-do-container';
 import FAQContainer from './faq-container';
 import RegistryContainer from './registry-container';
-// import StickyHeader from '../Components/desktop/sticky-header';
+import StickyHeader from '../Components/desktop/sticky-header';
 // import NameHeaderDesktop from '../Components/desktop/name-header-desktop';
 import Footer from '../Components/footer';
 import ElegantHeader from '../Components/desktop/elegant-header';
@@ -91,6 +91,7 @@ const HomeContainer = () => {
 				<ElegantHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
 				<div className="section" id="header" ref={headerRef}>
 					<PhotoHeader />
+					<div style={{ height: '300px' }}>Temp Placeholder</div>
 				</div>
 				{/* <StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} /> */}
 				<div className="section" id="schedule" ref={scheduleRef}>

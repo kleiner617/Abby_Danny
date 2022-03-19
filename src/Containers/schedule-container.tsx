@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import Schedule from '../Content/Images/SectionHeaders/schedule_header.svg';
+import SampleBorder from '../Content/Images/SampleBorder.svg';
 
 type Props = {
 	className?: string;
@@ -7,8 +9,18 @@ type Props = {
 	isMobile?: boolean;
 };
 
+const TitleImage = styled.img`
+	height: 150px;
+`;
+
+const SampleBorderStyle = styled.img`
+	height: 100px;
+	width: 50%;
+	margin-top: 100px;
+`;
+
 const CeremonyDetails = styled('div')`
-	padding: ${(props: Props): string => (props.isMobile ? `20px 0` : '40px 0')};
+	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
 `;
 
 const Title = styled('div')`
@@ -82,7 +94,7 @@ export class CeremonyContainer extends React.PureComponent<Props> {
 					<FloralImage src={require('../Content/Images/florals-6.png')} {...this.props}></FloralImage>
 				</ImageHolder> */}
 
-				<Title {...this.props}>Schedule</Title>
+				<TitleImage src={Schedule} alt="Schedule" />
 				<DetailsContainer>
 					<Details {...this.props}>
 						<i className="material-icons" style={{ marginTop: '10px', fontSize: '35px' }}>
@@ -106,6 +118,7 @@ export class CeremonyContainer extends React.PureComponent<Props> {
 						<SubDetailsText {...this.props}>Richmond, Virginia</SubDetailsText>
 					</Details>
 				</DetailsContainer>
+				{/* <SampleBorderStyle src={SampleBorder} alt="Schedule" /> */}
 			</CeremonyDetails>
 		);
 	}

@@ -18,36 +18,22 @@ const HeartImg = styled('img')`
 const StickyHeader = ({ visibleSection, scrollToHome }: Props) => {
 	return (
 		<div
-			className={`sticky ${
-				visibleSection === 'ceremony' ||
+			className={`sticky ${visibleSection === 'schedule' ||
+				visibleSection === 'travel' ||
+				visibleSection === 'things-to-do' ||
 				visibleSection === 'faq' ||
-				visibleSection === 'getting-there' ||
-				visibleSection === 'details' ||
-				visibleSection === 'registry' ||
-				visibleSection === 'rsvp'
-					? 'show'
-					: 'hide'
-			}`}
+				visibleSection === 'registry'}`}
 		>
 			<div className="header">
 				<Link smooth to="/#schedule">
-					<button type="button" className={`header_link ${visibleSection === 'ceremony' ? 'selected' : ''}`}>
+					<button type="button" className={`header_link ${visibleSection === 'schedule' ? 'selected' : ''}`}>
 						Schedule
 					</button>
 				</Link>
 
 				<Link smooth to="/#travel">
-					<button type="button" className={`header_link ${visibleSection === 'faq' ? 'selected' : ''}`}>
+					<button type="button" className={`header_link ${visibleSection === 'travel' ? 'selected' : ''}`}>
 						Travel
-					</button>
-				</Link>
-
-				<Link smooth to="/#accomodations">
-					<button
-						type="button"
-						className={`header_link ${visibleSection === 'getting-there' ? 'selected' : ''}`}
-					>
-						Accomodations
 					</button>
 				</Link>
 
@@ -59,12 +45,15 @@ const StickyHeader = ({ visibleSection, scrollToHome }: Props) => {
 				</Link>
 
 				<Link smooth to="/#thingsToDo">
-					<button type="button" className={`header_link ${visibleSection === 'details' ? 'selected' : ''}`}>
+					<button
+						type="button"
+						className={`header_link ${visibleSection === 'things_to_do' ? 'selected' : ''}`}
+					>
 						Things To Do
 					</button>
 				</Link>
 				<Link smooth to="/#faq">
-					<button type="button" className={`header_link ${visibleSection === 'registry' ? 'selected' : ''}`}>
+					<button type="button" className={`header_link ${visibleSection === 'faq' ? 'selected' : ''}`}>
 						FAQ
 					</button>
 				</Link>
@@ -72,11 +61,6 @@ const StickyHeader = ({ visibleSection, scrollToHome }: Props) => {
 					<button type="button" className={`header_link ${visibleSection === 'registry' ? 'selected' : ''}`}>
 						Registry
 					</button>
-				</Link>
-
-				<Link className="header_link" to={`/rsvp`}>
-					{' '}
-					RSVP{' '}
 				</Link>
 			</div>
 		</div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import MenuHeader from './menu-header';
+import NameHeader from '../../Content/Images/Name_Title.svg';
 
 const Name = styled.div`
 	font-family: 'Pinyon Script', cursive;
@@ -8,6 +9,11 @@ const Name = styled.div`
 	letter-spacing: -0.015em;
 	margin-top: 1rem;
 	text-align: center;
+	margin-left: 30px;
+`;
+
+const TitleImage = styled.img`
+	height: 150px;
 `;
 
 const DateStyle = styled.div`
@@ -25,7 +31,8 @@ type ElegantHeaderProps = {
 const ElegantHeader: React.FC<ElegantHeaderProps> = ({ visibleSection, scrollToHome }: ElegantHeaderProps) => {
 	return (
 		<div>
-			<Name>Abby & Danny</Name>
+			<TitleImage src={NameHeader} alt="Abby and Danny" />
+			{/* <Name>Abby & Danny</Name> */}
 			<DateStyle>September 10, 2022</DateStyle>
 			<MenuHeader visibleSection={visibleSection} scrollToHome={scrollToHome}></MenuHeader>
 		</div>
