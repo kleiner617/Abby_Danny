@@ -1,6 +1,5 @@
-// import * as React from "react";
 import React, { useRef, useEffect, useState } from 'react';
-// import MenuHeader from '../Components/desktop/menu-header';
+import styled from '@emotion/styled';
 
 // Schedule, travel, things to do, faq, registry
 import PhotoHeader from '../Components/desktop/photo-header-large';
@@ -10,11 +9,8 @@ import ThingsToDoContainer from './things-to-do-container';
 import FAQContainer from './faq-container';
 import RegistryContainer from './registry-container';
 import StickyHeader from '../Components/desktop/sticky-header';
-// import NameHeaderDesktop from '../Components/desktop/name-header-desktop';
 import Footer from '../Components/footer';
 import ElegantHeader from '../Components/desktop/elegant-header';
-
-type Props = {};
 
 const getDimensions = (ele: any) => {
 	const { height } = ele.getBoundingClientRect();
@@ -34,6 +30,11 @@ const scrollTo = (ele: any) => {
 		block: 'start'
 	});
 };
+
+const HomeBlurb = styled('div')`
+	height: 1300px;
+	font-size: 24px;
+`;
 
 const HomeContainer = () => {
 	const [visibleSection, setVisibleSection] = useState<any>();
@@ -55,7 +56,6 @@ const HomeContainer = () => {
 	];
 
 	useEffect(() => {
-		console.log('this is the first use Effect', visibleSection);
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY + 82.76;
 
@@ -88,12 +88,19 @@ const HomeContainer = () => {
 	return (
 		<div className="App">
 			<div className="content">
-				<ElegantHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
 				<div className="section" id="header" ref={headerRef}>
+					<ElegantHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
 					<PhotoHeader />
-					<div style={{ height: '300px' }}>Temp Placeholder</div>
+					<HomeBlurb>
+						This is something here about Abby and Danny wedding, blah blah..... Just need a temp placeholder
+						for now, will fill this in blah blah
+					</HomeBlurb>
 				</div>
-				<StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
+
+				{visibleSection !== 'header' && (
+					<StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
+				)}
+
 				<div className="section" id="schedule" ref={scheduleRef}>
 					<ScheduleContainer></ScheduleContainer>
 				</div>

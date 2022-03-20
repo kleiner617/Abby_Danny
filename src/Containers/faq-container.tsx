@@ -41,7 +41,7 @@ const AnswerStyle = styled('div')`
 	margin: auto;
 `;
 
-export class COVIDContainer extends React.PureComponent<Props> {
+export class FAQContainer extends React.PureComponent<Props> {
 	openMaps = () => {
 		window.open(
 			'https://www.google.com/maps/dir/?api=1&destination=QVB&destination_place_id=ChIJ11lAdDEVsYkRUIzFDtlG9FU'
@@ -78,4 +78,5 @@ export class COVIDContainer extends React.PureComponent<Props> {
 // Green color to use....
 // #6f9667
 
-export default COVIDContainer;
+export default FAQContainer;
+

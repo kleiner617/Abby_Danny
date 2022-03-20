@@ -72,8 +72,8 @@ a.active {
 	background-color: transparent;
 	color: black;
 	font-size: 24px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left:20px;
+	margin-right:20px;
 	border: none;
 	border-bottom: 3px solid transparent;
 	cursor: pointer;

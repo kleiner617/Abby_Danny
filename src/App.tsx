@@ -9,12 +9,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 	const isDesktop = useMediaQuery({ minWidth: 992 });
-	const isTablet = useMediaQuery({
-		minWidth: 768,
-		maxWidth: 991
-	});
+	// const isTablet = useMediaQuery({
+	// 	minWidth: 768,
+	// 	maxWidth: 991
+	// });
 
-	const whichContainer = isDesktop || isTablet ? DesktopContainer : MobileContainer;
+	const whichContainer = isDesktop ? DesktopContainer : MobileContainer;
 
 	return (
 		<div>

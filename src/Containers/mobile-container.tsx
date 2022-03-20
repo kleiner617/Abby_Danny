@@ -1,12 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 import PhotoHeader from '../Components/mobile/photo-header-mobile';
-import DetailsContainer from './things-to-do-container';
+import ThingsToDoContainer from './things-to-do-container';
 import RegistryContainer from './registry-container';
 import ScheduleContainer from './schedule-container';
 import MobileNavMenu from '../Components/mobile/mobile-nav-menu';
 import TravelContainer from './travel-container';
-import COVIDContainer from './faq-container';
-import NameHeaderMobile from '../Components/mobile/name-header-mobile';
+import FAQContainer from './faq-container';
 import Footer from '../Components/footer';
 import ElegantHeader from '../Components/mobile/mobile-elegant-header';
 
@@ -37,16 +36,16 @@ const MobileContainer = () => {
 	const headerRef = useRef(null);
 	const scheduleRef = useRef(null);
 	const covidRef = useRef(null);
-	const travelRef = useRef(null);
-	const detailsRef = useRef(null);
+	const accomodationRef = useRef(null);
+	const thingsToDoRef = useRef(null);
 	const registryRef = useRef(null);
 
 	const sectionRefs = [
 		{ section: 'header', ref: headerRef },
 		{ section: 'schedule', ref: scheduleRef },
 		{ section: 'faq', ref: covidRef },
-		{ section: 'details', ref: detailsRef },
-		{ section: 'travel', ref: travelRef },
+		{ section: 'thingsToDo', ref: thingsToDoRef },
+		{ section: 'accomodation', ref: accomodationRef },
 		{ section: 'registry', ref: registryRef }
 	];
 
@@ -93,15 +92,15 @@ const MobileContainer = () => {
 				<div className="section" id="schedule" ref={scheduleRef}>
 					<ScheduleContainer isMobile={true}></ScheduleContainer>
 				</div>
-				<div className="section" id="faq" ref={covidRef}>
-					<COVIDContainer isMobile={true}></COVIDContainer>
-				</div>
-
-				<div className="section" id="venue" ref={travelRef}>
+				<div className="section" id="accomodation" ref={accomodationRef}>
 					<TravelContainer isMobile={true}></TravelContainer>
 				</div>
-				<div className="section" id="details" ref={detailsRef}>
-					<DetailsContainer isMobile={true}></DetailsContainer>
+				<div className="section" id="thingsToDo" ref={thingsToDoRef}>
+					<ThingsToDoContainer isMobile={true}></ThingsToDoContainer>
+				</div>
+
+				<div className="section" id="faq" ref={covidRef}>
+					<FAQContainer isMobile={true}></FAQContainer>
 				</div>
 
 				<div className="section" id="registry" ref={registryRef}>
