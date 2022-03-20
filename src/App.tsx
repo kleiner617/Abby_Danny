@@ -5,14 +5,9 @@ import DesktopContainer from './Containers/home-container';
 import MobileContainer from './Containers/mobile-container';
 import './App.css';
 import { useMediaQuery } from 'react-responsive';
-import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 	const isDesktop = useMediaQuery({ minWidth: 992 });
-	// const isTablet = useMediaQuery({
-	// 	minWidth: 768,
-	// 	maxWidth: 991
-	// });
 
 	const whichContainer = isDesktop ? DesktopContainer : MobileContainer;
 
