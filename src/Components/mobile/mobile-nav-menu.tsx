@@ -66,7 +66,7 @@ const styles = {
 	}
 };
 
-const HeartImg = styled('img')`
+const MonogramImage = styled('img')`
 	height: 90px;
 	width: 90px;
 	margin-top: -10px;
@@ -133,10 +133,10 @@ export class MobileNavMenu extends React.Component<PropsType, StateType> {
 				</Link>
 
 				<Link smooth to="/" activeClassName="active" onClick={this.toggleMenu}>
-					<HeartImg
+					<MonogramImage
 						src={require('../../Content/Images/A-D_navy.png')}
 						onClick={this.props.scrollToHome}
-					></HeartImg>
+					/>
 				</Link>
 			</Menu>
 		);

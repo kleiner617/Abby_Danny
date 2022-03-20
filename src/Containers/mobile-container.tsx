@@ -4,7 +4,7 @@ import DetailsContainer from './things-to-do-container';
 import RegistryContainer from './registry-container';
 import ScheduleContainer from './schedule-container';
 import MobileNavMenu from '../Components/mobile/mobile-nav-menu';
-import GettingThereContainer from './travel-container';
+import TravelContainer from './travel-container';
 import COVIDContainer from './faq-container';
 import NameHeaderMobile from '../Components/mobile/name-header-mobile';
 import Footer from '../Components/footer';
@@ -37,7 +37,7 @@ const MobileContainer = () => {
 	const headerRef = useRef(null);
 	const scheduleRef = useRef(null);
 	const covidRef = useRef(null);
-	const gettingThereRef = useRef(null);
+	const travelRef = useRef(null);
 	const detailsRef = useRef(null);
 	const registryRef = useRef(null);
 
@@ -46,7 +46,7 @@ const MobileContainer = () => {
 		{ section: 'schedule', ref: scheduleRef },
 		{ section: 'faq', ref: covidRef },
 		{ section: 'details', ref: detailsRef },
-		{ section: 'getting-there', ref: gettingThereRef },
+		{ section: 'travel', ref: travelRef },
 		{ section: 'registry', ref: registryRef }
 	];
 
@@ -97,8 +97,8 @@ const MobileContainer = () => {
 					<COVIDContainer isMobile={true}></COVIDContainer>
 				</div>
 
-				<div className="section" id="venue" ref={gettingThereRef}>
-					<GettingThereContainer isMobile={true}></GettingThereContainer>
+				<div className="section" id="venue" ref={travelRef}>
+					<TravelContainer isMobile={true}></TravelContainer>
 				</div>
 				<div className="section" id="details" ref={detailsRef}>
 					<DetailsContainer isMobile={true}></DetailsContainer>

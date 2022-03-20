@@ -70,24 +70,18 @@ a.active {
 .header_link {
 	padding: 20px;
 	background-color: transparent;
-	color: #fff;
-	font-weight: bold;
+	color: black;
 	font-size: 24px;
+	margin-left: 20px;
+	margin-right: 20px;
 	border: none;
 	border-bottom: 3px solid transparent;
 	cursor: pointer;
 	outline: none;
 }
 
-/* Common navy: 
-/* 081090 */
-
-/* common sage 
-a6b691
-*/
-
 .header {
-	/* background-color: #000048; */
+	background-color: white;
 }
 
 .selected {

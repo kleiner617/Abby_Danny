@@ -23,10 +23,7 @@ export class NameHeader extends React.PureComponent<Props> {
 	render() {
 		return (
 			<NameContent className={this.props.className} id={this.props.id}>
-				<MobileMainTitle
-					src={require('../../Content/Images/name_header_mobile.png')}
-					{...this.props}
-				></MobileMainTitle>
+				<MobileMainTitle src={require('../../Content/Images/name_header_mobile.png')} {...this.props} />
 				<DateText>September 10, 2022</DateText>
 			</NameContent>
 		);

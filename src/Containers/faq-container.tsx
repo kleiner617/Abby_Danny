@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import FAQ from '../Content/Images/SectionHeaders/faq_header.svg';
-import SampleBorder from '../Content/Images/SampleBorder.svg';
 import Heart from '../Content/Images/heart.svg';
 
 type Props = {
@@ -10,11 +9,6 @@ type Props = {
 	isMobile?: boolean;
 };
 
-const SampleBorderStyle = styled.img`
-	height: 100px;
-	width: 50%;
-	margin-top: 100px;
-`;
 const TitleImage = styled.img`
 	height: 150px;
 	margin-bottom: 40px;
@@ -76,7 +70,6 @@ export class COVIDContainer extends React.PureComponent<Props> {
 				<HeartImage src={Heart} />
 				<QuestionStyle>What should I wear?</QuestionStyle>
 				<AnswerStyle>The dress code for our wedding is Black-Tie Optional.</AnswerStyle>
-				{/* <SampleBorderStyle src={SampleBorder} alt="Schedule" /> */}
 			</FAQDetails>
 		);
 	}

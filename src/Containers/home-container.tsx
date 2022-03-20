@@ -41,7 +41,7 @@ const HomeContainer = () => {
 	const headerRef = useRef(null);
 	const scheduleRef = useRef(null);
 	const faqRef = useRef(null);
-	const travelRef = useRef(null);
+	const accomdationsRef = useRef(null);
 	const thingsToDoRef = useRef(null);
 	const registryRef = useRef(null);
 
@@ -49,7 +49,7 @@ const HomeContainer = () => {
 		{ section: 'header', ref: headerRef },
 		{ section: 'schedule', ref: scheduleRef },
 		{ section: 'faq', ref: faqRef },
-		{ section: 'travel', ref: travelRef },
+		{ section: 'accomodations', ref: accomdationsRef },
 		{ section: 'thingsToDo', ref: thingsToDoRef },
 		{ section: 'registry', ref: registryRef }
 	];
@@ -93,11 +93,11 @@ const HomeContainer = () => {
 					<PhotoHeader />
 					<div style={{ height: '300px' }}>Temp Placeholder</div>
 				</div>
-				{/* <StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} /> */}
+				<StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
 				<div className="section" id="schedule" ref={scheduleRef}>
 					<ScheduleContainer></ScheduleContainer>
 				</div>
-				<div className="section" id="travel" ref={travelRef}>
+				<div className="section" id="accomodations" ref={accomdationsRef}>
 					<TravelContainer></TravelContainer>
 				</div>
 				<div className="section" id="thingsToDo" ref={thingsToDoRef}>

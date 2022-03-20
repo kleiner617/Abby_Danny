@@ -6,10 +6,11 @@ type Props = {
 	scrollToHome?: any;
 };
 
-const HeartImg = styled('img')`
-	height: 64px;
-	width: 64px;
-	margin-top: -10px;
+const MonogramImage = styled('img')`
+	height: 85px;
+	width: 85px;
+	margin-top: 2px;
+	margin-bottom: 4px;
 `;
 
 // French Blue: #0072bb
@@ -37,17 +38,23 @@ const StickyHeader = ({ visibleSection, scrollToHome }: Props) => {
 					</button>
 				</Link>
 
+				<Link smooth to="/#accomodations">
+					<button
+						type="button"
+						className={`header_link ${visibleSection === 'accomodations' ? 'selected' : ''}`}
+					>
+						Accomodations
+					</button>
+				</Link>
+
 				<Link smooth to="/">
-					<HeartImg
-						src={require('../../Content/Images/A-D_frenchBlue.png')}
-						onClick={scrollToHome}
-					></HeartImg>
+					<MonogramImage src={require('../../Content/Images/A-D_frenchBlue.png')} onClick={scrollToHome} />
 				</Link>
 
 				<Link smooth to="/#thingsToDo">
 					<button
 						type="button"
-						className={`header_link ${visibleSection === 'things_to_do' ? 'selected' : ''}`}
+						className={`header_link ${visibleSection === 'thingsToDo' ? 'selected' : ''}`}
 					>
 						Things To Do
 					</button>

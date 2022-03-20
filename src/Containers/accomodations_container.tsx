@@ -10,10 +10,9 @@ type Props = {
 
 const TitleImage = styled.img`
 	height: 150px;
-	margin-bottom: 20px;
 `;
 
-const TravelDetails = styled('div')`
+const GettingThereDetails = styled('div')`
 	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
 	// background-color: rgb(0, 114, 187, 0.2);
 `;
@@ -40,12 +39,11 @@ const SubDetailsText = styled('p')`
 	margin: 0;
 `;
 
-export class TravelContainer extends React.PureComponent<Props> {
+export class AccomodationsContainer extends React.PureComponent<Props> {
 	render() {
 		return (
-			<TravelDetails className={this.props.className} id={this.props.id}>
+			<GettingThereDetails className={this.props.className} id={this.props.id}>
 				<TitleImage src={Travel} alt="Travel" />
-				Blah blah blah, placeholder for now....
 				<Details>
 					Flights
 					<DetailsText {...this.props}>
@@ -53,6 +51,7 @@ export class TravelContainer extends React.PureComponent<Props> {
 						<SubDetailsText {...this.props}>Airport details...</SubDetailsText>
 					</DetailsText>
 				</Details>
+
 				<Details>
 					Jefferson Hotel
 					<DetailsText {...this.props}>
@@ -60,9 +59,9 @@ export class TravelContainer extends React.PureComponent<Props> {
 						<SubDetailsText {...this.props}>Airport details...</SubDetailsText>
 					</DetailsText>
 				</Details>
-			</TravelDetails>
+			</GettingThereDetails>
 		);
 	}
 }
 
-export default TravelContainer;
+export default AccomodationsContainer;

@@ -27,7 +27,7 @@ export class NameHeader extends React.PureComponent<Props> {
 	render() {
 		return (
 			<NameContent className={this.props.className} id={this.props.id}>
-				<MainTitle src={require('../../Content/Images/name_header_desktop.png')} {...this.props}></MainTitle>
+				<MainTitle src={require('../../Content/Images/name_header_desktop.png')} {...this.props} />
 				<DateText>September 10, 2022</DateText>
 			</NameContent>
 		);

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import Schedule from '../Content/Images/SectionHeaders/schedule_header.svg';
-import SampleBorder from '../Content/Images/SampleBorder.svg';
 
 type Props = {
 	className?: string;
@@ -11,12 +10,7 @@ type Props = {
 
 const TitleImage = styled.img`
 	height: 150px;
-`;
-
-const SampleBorderStyle = styled.img`
-	height: 100px;
-	width: 50%;
-	margin-top: 100px;
+	margin-bottom: 20px;
 `;
 
 const CeremonyDetails = styled('div')`
@@ -42,11 +36,6 @@ const DetailsTitle = styled('div')`
 	font-family: 'Cormorant Garamond', serif;
 `;
 
-const AtText = styled('p')`
-	font-size: ${(props: Props): string => (props.isMobile ? '20px' : '30px')};
-	margin: 0;
-	line-height: ${(props: Props): string => (props.isMobile ? '15px' : '20px')};
-`;
 const DetailsText = styled('p')`
 	font-size: ${(props: Props): string => (props.isMobile ? '20px' : '30px')};
 	margin: 0;
@@ -56,6 +45,23 @@ const SubDetailsText = styled('p')`
 	margin: 0;
 `;
 
+const ScheduleAddress = styled('div')`
+	a:link {
+		text-decoration: none;
+	}
+	a:visited {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;
+		color: #0072bb;
+	}
+	a:active {
+		text-decoration: none;
+		color: #0072bb;
+	}
+`;
+
 const DetailsContainer = styled('div')`
 	display: flex;
 `;
@@ -63,28 +69,9 @@ const DetailsContainer = styled('div')`
 const LineDiv = styled('div')`
 	border: solid 0.5px grey;
 `;
-
-const ImageHolder = styled('div')``;
-
-const CircleImage = styled('img')`
-	margin-top: 30px;
-	border-radius: 50%;
-	height: ${(props: Props): string => (props.isMobile ? '250px' : '500px')};
-	width: ${(props: Props): string => (props.isMobile ? '250px' : '500px')};
-`;
-const FloralImage = styled('img')`
-	height: ${(props: Props): string => (props.isMobile ? '279px' : '557px')};
-	width: ${(props: Props): string => (props.isMobile ? '303px' : '601px')};
-	position: absolute;
-	margin-top: ${(props: Props): string => (props.isMobile ? '25px' : '19px')};
-	margin-left: ${(props: Props): string => (props.isMobile ? '-283px' : '-565px')};
-`;
-
 export class CeremonyContainer extends React.PureComponent<Props> {
 	openMaps = () => {
-		window.open(
-			'https://www.google.com/maps/dir/?api=1&destination=QVB&destination_place_id=ChIJ11lAdDEVsYkRUIzFDtlG9FU'
-		);
+		window.open('https://goo.gl/maps/wqdkTugYKiw9qZC19');
 	};
 	render() {
 		return (
@@ -114,11 +101,15 @@ export class CeremonyContainer extends React.PureComponent<Props> {
 							place
 						</i>
 						<DetailsTitle {...this.props}>Cathedral of the Sacred Heart</DetailsTitle>
-						<SubDetailsText {...this.props}>823 Cathedral Place</SubDetailsText>
-						<SubDetailsText {...this.props}>Richmond, Virginia</SubDetailsText>
+
+						<ScheduleAddress>
+							<a href="https://goo.gl/maps/wqdkTugYKiw9qZC19" target="_blank" rel="noopener noreferrer">
+								<SubDetailsText {...this.props}>823 Cathedral Place</SubDetailsText>
+								<SubDetailsText {...this.props}>Richmond, Virginia</SubDetailsText>
+							</a>
+						</ScheduleAddress>
 					</Details>
 				</DetailsContainer>
-				{/* <SampleBorderStyle src={SampleBorder} alt="Schedule" /> */}
 			</CeremonyDetails>
 		);
 	}

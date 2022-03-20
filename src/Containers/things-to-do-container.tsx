@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import ThingsToDo from '../Content/Images/SectionHeaders/things_to_do_header.svg';
-import SampleBorder from '../Content/Images/SampleBorder.svg';
 
 type Props = {
 	className?: string;
@@ -9,25 +8,13 @@ type Props = {
 	isMobile?: boolean;
 };
 
-const SampleBorderStyle = styled.img`
-	height: 100px;
-	width: 50%;
-	margin-top: 100px;
-`;
-
 const TitleImage = styled.img`
 	height: 150px;
+	margin-bottom: 20px;
 `;
 
 const ThingsToDoContainerStyle = styled('div')`
 	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
-`;
-
-const Title = styled('div')`
-	font-size: ${(props: Props): string => (props.isMobile ? `42px` : '70px')};
-	margin-top: 40px;
-	padding: ${(props: Props): string => (props.isMobile ? `15px 0` : '30px 0')};
-	font-family: 'Pinyon Script', cursive;
 `;
 
 const CircleImage = styled('img')`
@@ -122,7 +109,7 @@ export class ThingsToDoContainer extends React.PureComponent<Props> {
 							<CircleImage
 								src={require('../Content/Images/things_to_do/vmfa_circle.jpeg')}
 								{...this.props}
-							></CircleImage>
+							/>
 						</ImageHolder>
 						<OptionTitle>
 							<a href={'http://vmfa.museum/'} target="_blank" rel="noopener noreferrer">
@@ -149,7 +136,7 @@ export class ThingsToDoContainer extends React.PureComponent<Props> {
 							<CircleImage
 								src={require('../Content/Images/things_to_do/pipeline_circle.jpg')}
 								{...this.props}
-							></CircleImage>
+							/>
 						</ImageHolder>
 						<OptionTitle>
 							<a
@@ -178,7 +165,7 @@ export class ThingsToDoContainer extends React.PureComponent<Props> {
 							<CircleImage
 								src={require('../Content/Images/things_to_do/beer_circle.jpeg')}
 								{...this.props}
-							></CircleImage>
+							/>
 						</ImageHolder>
 						<OptionTitle>
 							<a
@@ -213,7 +200,7 @@ export class ThingsToDoContainer extends React.PureComponent<Props> {
 							<CircleImage
 								src={require('../Content/Images/things_to_do/carytown_circle.jpeg')}
 								{...this.props}
-							></CircleImage>
+							/>
 						</ImageHolder>
 						<OptionTitle>
 							<a href={'https://www.carytownrva.com/'} target="_blank" rel="noopener noreferrer">
@@ -234,7 +221,6 @@ export class ThingsToDoContainer extends React.PureComponent<Props> {
 						</OptionDetails>
 					</OptionStyle>
 				</OptionsContainer>
-				{/* <SampleBorderStyle src={SampleBorder} alt="Schedule" /> */}
 			</ThingsToDoContainerStyle>
 		);
 	}

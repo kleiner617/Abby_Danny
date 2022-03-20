@@ -9,12 +9,12 @@ type Props = {
 };
 
 const RegistryDetails = styled('div')`
-margin-top:
 	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
 `;
 
 const TitleImage = styled.img`
 	height: 150px;
+	margin-bottom: 20px;
 `;
 
 const Title = styled('div')`
@@ -31,15 +31,6 @@ const Details = styled('div')`
 	margin: auto;
 `;
 
-const LogoContainer = styled('div')``;
-
-const LogoImage = styled('img')`
-	margin: ${(props: Props): string => (props.isMobile ? '5px 22px' : '16px 43px')};
-	width: ${(props: Props): string => (props.isMobile ? '100px' : '175px')};
-	display: inline-block;
-	cursor: pointer;
-`;
-
 const StandAloneZola = styled('img')`
 	margin: 30px;
 	width: ${(props: Props): string => (props.isMobile ? '200px' : '400px')};
@@ -51,17 +42,6 @@ export class RegistryContainer extends React.PureComponent<Props> {
 			case 'zola':
 				window.open('https://www.zola.com/registry/heatherandemily');
 				break;
-			case 'crateAndBarrel':
-				window.open('https://www.crateandbarrel.com/gift-registry/emily-klein-and-heather-priestley/r6083213');
-				break;
-			case 'williamsSonoma':
-				window.open('https://www.williams-sonoma.com/registry/qg5fslvtz8/registry-list.html');
-				break;
-			case 'surLaTable':
-				window.open(
-					'https://www.surlatable.com/on/demandware.store/Sites-SLT-Site/default/GiftRegistryCustomer-Show?ID=274e3f67afe30af6a000b59e77'
-				);
-				break;
 			default:
 				break;
 		}
@@ -69,14 +49,18 @@ export class RegistryContainer extends React.PureComponent<Props> {
 	render() {
 		return (
 			<RegistryDetails className={this.props.className} id={this.props.id}>
-				<TitleImage src={Registry} alt="Registry" />
-				<StandAloneZola
-					src={require('../Content/Images/logos/Zola-Logo.png')}
-					onClick={() => {
-						this.onClickRegistryItem('zola');
-					}}
-					{...this.props}
-				></StandAloneZola>
+				<div>
+					<TitleImage src={Registry} alt="Registry" />
+				</div>
+				<div>
+					<StandAloneZola
+						src={require('../Content/Images/logos/Zola-Logo.png')}
+						onClick={() => {
+							this.onClickRegistryItem('zola');
+						}}
+						{...this.props}
+					/>
+				</div>
 			</RegistryDetails>
 		);
 	}
