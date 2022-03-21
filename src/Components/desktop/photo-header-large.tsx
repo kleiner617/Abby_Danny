@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 type Props = {};
 
 const PhotoHeaderStyle = styled.div`
-	width: 80%;
+	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
 `;

@@ -13,6 +13,11 @@ const TitleImage = styled.img`
 	margin-bottom: 20px;
 `;
 
+const RingSample = styled.img`
+	height: 150px;
+	margin-bottom: 20px;
+`;
+
 const CeremonyDetails = styled('div')`
 	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
 `;
@@ -84,9 +89,7 @@ export class CeremonyContainer extends React.PureComponent<Props> {
 				<TitleImage src={Schedule} alt="Schedule" />
 				<DetailsContainer>
 					<Details {...this.props}>
-						<i className="material-icons" style={{ marginTop: '10px', fontSize: '35px' }}>
-							schedule
-						</i>
+						<RingSample src={require('../Content/Images/ring.png')} alt="Schedule" />
 						<DetailsTitle {...this.props}>Ceremony</DetailsTitle>
 						<DetailsText {...this.props}>September 10, 2022</DetailsText>
 						<DetailsText {...this.props}>2:00 pm</DetailsText>
