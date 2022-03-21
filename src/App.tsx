@@ -19,11 +19,3 @@ const App = () => {
 };
 
 export default App;
-// git remote add dreamhost ssh://dh_93qg5e@dannyandabby.com/~/Abby_Danny.git
-cat ~/.ssh/dreamhost-git-key.pub | ssh dh_93qg5e@dannyandabby.com "mkdir ~/.ssh; cat >> ~/.ssh/authorized_keys"
-
-[local ~]$ git remote add dreamhost ssh://dh_93qg5e@dannyandabby.com/~/abbyanddanny.com.git
-
-/Users/Emily.Klein/Documents/OtherProjs/Abby_Danny/.vscode
-#!/bin/sh
-GIT_WORK_TREE=/Users/Emily.Klein/Documents/OtherProjs/Abby_Danny git checkout -f
