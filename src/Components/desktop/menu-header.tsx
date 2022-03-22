@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-// import { Link } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
 
 type Props = {

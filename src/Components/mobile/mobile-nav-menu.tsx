@@ -42,14 +42,11 @@ const styles = {
 	bmItemList: {
 		fontSize: '28px',
 		lineHeight: '60px',
-		// position: "relative",
 		display: 'grid !important',
 		gridTemplateRows: '1fr 1fr 1fr 1fr',
 		top: '50%',
 		left: '50%',
 		paddingTop: '30%',
-		// msTransform: "translate(-50%, -50%)",
-		// Transform: "translate(-50%, -50%)",
 		justifyContent: 'center',
 		textAlign: 'center'
 	},

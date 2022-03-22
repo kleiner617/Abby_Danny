@@ -21,42 +21,42 @@ export class PhotoHeader extends React.PureComponent<Props> {
 				<Carousel>
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_mobile_1.jpg')}
+							src={require('../../Content/Images/carousel/AD_mobile_1.jpg')}
 							alt="Abby and Danny engagement"
 							style={photoMobileStyle}
 						/>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_mobile_2.jpg')}
+							src={require('../../Content/Images/carousel/AD_mobile_2.jpg')}
 							alt="Abby and Danny engagement"
 							style={photoMobileStyle}
 						/>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_mobile_3.jpg')}
+							src={require('../../Content/Images/carousel/AD_mobile_3.jpg')}
 							alt="Abby and Danny engagement"
 							style={photoMobileStyle}
 						/>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_mobile_4.jpg')}
+							src={require('../../Content/Images/carousel/AD_mobile_4.jpg')}
 							alt="Abby and Danny engagement"
 							style={photoMobileStyle}
 						/>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_mobile_5.jpg')}
+							src={require('../../Content/Images/carousel/AD_mobile_5.jpg')}
 							alt="Abby and Danny engagement"
 							style={photoMobileStyle}
 						/>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_mobile_6.jpg')}
+							src={require('../../Content/Images/carousel/AD_mobile_6.jpg')}
 							alt="Abby and Danny engagement"
 							style={photoMobileStyle}
 						/>

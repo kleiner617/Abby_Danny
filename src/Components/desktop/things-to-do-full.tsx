@@ -47,9 +47,11 @@ const OptionTitle = styled('div')`
 
 	a:link {
 		text-decoration: none;
+		color: black;
 	}
 	a:visited {
 		text-decoration: none;
+		color: black;
 	}
 	a:hover {
 		text-decoration: none;
@@ -65,9 +67,11 @@ const OptionAddress = styled('div')`
 	margin-bottom: 20px;
 	a:link {
 		text-decoration: none;
+		color: black;
 	}
 	a:visited {
 		text-decoration: none;
+		color: black;
 	}
 	a:hover {
 		text-decoration: none;

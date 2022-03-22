@@ -8,20 +8,18 @@ type Props = {
 };
 
 const FooterText = styled('div')`
-	background: #f0f3ed;
+	background: white;
 	padding: 10px;
 	padding-bottom: ${(props: Props): string => (props.isMobile ? '15px' : '25px')};
 `;
 const WebsiteText = styled('div')`
 	width: 100%;
 	font-size: ${(props: Props): string => (props.isMobile ? '18px' : '22px')};
-	/* font */
 `;
 const PhotographyText = styled('div')`
 	width: 100%;
 	padding: 5px;
 	font-size: ${(props: Props): string => (props.isMobile ? '12px' : '16x')};
-	/* font */
 `;
 
 export class Footer extends React.PureComponent<Props> {

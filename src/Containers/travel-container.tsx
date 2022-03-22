@@ -15,7 +15,6 @@ const TitleImage = styled.img`
 
 const TravelDetails = styled('div')`
 	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
-	// background-color: rgb(0, 114, 187, 0.2);
 `;
 
 const Title = styled('div')`

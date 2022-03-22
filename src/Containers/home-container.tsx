@@ -1,7 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-
-// Schedule, travel, things to do, faq, registry
 import PhotoHeader from '../Components/desktop/photo-header-large';
 import ScheduleContainer from './schedule-container';
 import TravelContainer from './travel-container';

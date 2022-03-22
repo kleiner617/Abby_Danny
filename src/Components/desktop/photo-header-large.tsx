@@ -17,7 +17,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 				<Carousel>
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_Long_1.jpg')}
+							src={require('../../Content/Images/carousel/AD_Long_1.jpg')}
 							alt="Abby and Danny at Virginia House"
 							style={{
 								width: '100%'
@@ -27,7 +27,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_Long_2.jpg')}
+							src={require('../../Content/Images/carousel/AD_Long_2.jpg')}
 							alt="Abby and Danny at Virginia House"
 							style={{
 								width: '100%'
@@ -37,7 +37,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_Long_3.jpg')}
+							src={require('../../Content/Images/carousel/AD_Long_3.jpg')}
 							alt="Abby and Danny at Virginia House"
 							style={{
 								width: '100%'
@@ -47,7 +47,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_Long_4.jpg')}
+							src={require('../../Content/Images/carousel/AD_Long_4.jpg')}
 							alt="Abby and Danny at Virginia House"
 							style={{
 								width: '100%'
@@ -57,7 +57,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_Long_5.jpg')}
+							src={require('../../Content/Images/carousel/AD_Long_5.jpg')}
 							alt="Abby and Danny at Virginia House"
 							style={{
 								width: '100%'
@@ -67,7 +67,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_Long_6.jpg')}
+							src={require('../../Content/Images/carousel/AD_Long_6.jpg')}
 							alt="Abby and Danny at Virginia House"
 							style={{
 								width: '100%'
@@ -77,7 +77,7 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/AD_Long_7.jpg')}
+							src={require('../../Content/Images/carousel/AD_Long_7.jpg')}
 							alt="Abby and Danny at Virginia House"
 							style={{
 								width: '100%'
