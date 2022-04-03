@@ -44,7 +44,7 @@ const HomeContainer = () => {
 
 	const headerRef = useRef(null);
 	const scheduleRef = useRef(null);
-	const faqRef = useRef(null);
+	const detailsRef = useRef(null);
 	const accomdationsRef = useRef(null);
 	const thingsToDoRef = useRef(null);
 	const registryRef = useRef(null);
@@ -52,7 +52,7 @@ const HomeContainer = () => {
 	const sectionRefs = [
 		{ section: 'header', ref: headerRef },
 		{ section: 'schedule', ref: scheduleRef },
-		{ section: 'faq', ref: faqRef },
+		{ section: 'details', ref: detailsRef },
 		{ section: 'accomodations', ref: accomdationsRef },
 		{ section: 'thingsToDo', ref: thingsToDoRef },
 		{ section: 'registry', ref: registryRef }
@@ -91,8 +91,8 @@ const HomeContainer = () => {
 	return (
 		<div className="App">
 			<div className="content">
+				<StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
 				<div className="section" id="header" ref={headerRef}>
-					<StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
 					<Fillertonotmessupstickyheader />
 					<PhotoHeader />
 					<HomeBlurb>
@@ -111,7 +111,7 @@ const HomeContainer = () => {
 				<div className="section" id="thingsToDo" ref={thingsToDoRef}>
 					<ThingsToDoContainer></ThingsToDoContainer>
 				</div>
-				<div className="section" id="faq" ref={faqRef}>
+				<div className="section" id="details" ref={detailsRef}>
 					<FAQContainer />
 				</div>
 				<div className="section" id="registry" ref={registryRef}>

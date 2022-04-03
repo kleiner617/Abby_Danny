@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import Travel from '../Content/Images/SectionHeaders/travel_header.svg';
+import AccomdationsTitle from '../Content/Images/SectionHeaders/Accomodations.svg';
 
 type Props = {
 	className?: string;
@@ -9,34 +9,11 @@ type Props = {
 };
 
 const TitleImage = styled.img`
-	height: 150px;
+	height: ${(props: Props): string => (props.isMobile ? `12vh` : '150px')};
 `;
 
 const GettingThereDetails = styled('div')`
 	padding: ${(props: Props): string => (props.isMobile ? `30px 0` : '40px 0')};
-	// background-color: rgb(0, 114, 187, 0.2);
-`;
-
-const Title = styled('div')`
-	font-size: ${(props: Props): string => (props.isMobile ? `42px` : '70px')};
-	margin-top: 40px;
-	padding: ${(props: Props): string => (props.isMobile ? `15px 0` : '30px 0')};
-	font-family: 'Pinyon Script', cursive;
-`;
-const Details = styled('div')`
-	font-size: 24px;
-	width: ${(props: Props): string => (props.isMobile ? '85%' : '70%')};
-	margin: auto;
-`;
-
-const DetailsText = styled('p')`
-	font-size: ${(props: Props): string => (props.isMobile ? '24px' : '36px')};
-	margin: 0;
-	padding-bottom: 20px;
-`;
-const SubDetailsText = styled('p')`
-	font-size: ${(props: Props): string => (props.isMobile ? '20px' : '30px')};
-	margin: 0;
 `;
 
 const OptionStyle = styled('p')`
@@ -92,10 +69,10 @@ const OptionAddress = styled('div')`
 const AddressText = styled('div')``;
 
 const OptionDetails = styled('p')`
-	font-size: 2.5vh;
+	font-size: ${(props: Props): string => (props.isMobile ? `20px` : '2.5vh')};
 	margin: 0;
-	padding-bottom: 20px;
-	width: 85%;
+	padding-bottom: 30px;
+	width: ${(props: Props): string => (props.isMobile ? `90%` : '50%')};
 	margin-right: auto;
 	margin-left: auto;
 `;
@@ -104,8 +81,12 @@ export class AccomodationsContainer extends React.PureComponent<Props> {
 	render() {
 		return (
 			<GettingThereDetails className={this.props.className} id={this.props.id}>
-				<Title>Accomodations</Title>
-				Reference FILLER when booking a room for the block rate.
+				<TitleImage src={AccomdationsTitle} alt="Accomdations" {...this.props} />
+				<OptionDetails {...this.props}>
+					For your convenience, a block of rooms has been reserved at two hotels in downtown Richmond. When
+					calling to make your reservation, please mention the Klein Traeger wedding in order to receive a
+					discounted rate.
+				</OptionDetails>
 				<OptionStyle>
 					<OptionTitle>
 						<a href={'https://www.jeffersonhotel.com/'} target="_blank" rel="noopener noreferrer">
@@ -118,7 +99,19 @@ export class AccomodationsContainer extends React.PureComponent<Props> {
 							<AddressText>Richmond, VA 23220 </AddressText>
 						</a>
 					</OptionAddress>
-					<OptionDetails>something blah</OptionDetails>
+				</OptionStyle>
+				<OptionStyle>
+					<OptionTitle>
+						<a href={'https://www.graduatehotels.com/richmond/'} target="_blank" rel="noopener noreferrer">
+							The Graduate Hotel
+						</a>
+					</OptionTitle>
+					<OptionAddress>
+						<a href="https://goo.gl/maps/iSTCSpFFWKjAUkwG6" target="_blank" rel="noopener noreferrer">
+							<AddressText>301 W Franklin Street</AddressText>
+							<AddressText>Richmond, VA 23220 </AddressText>
+						</a>
+					</OptionAddress>
 				</OptionStyle>
 			</GettingThereDetails>
 		);
@@ -126,14 +119,3 @@ export class AccomodationsContainer extends React.PureComponent<Props> {
 }
 
 export default AccomodationsContainer;
-
-// 1. Fix size of "Schedule" header
-// Get blurb from abby
-// Add something about the reception?  Need info about this...
-// Need info if she is going to put something about hotel blocks on this...
-// Replace hearts -> with watercolor icons
-// ipad -> new title for FAQ and Accomodations
-
-// Need  to get hotel block info from Mommy.  Jefferson, Graduate
-
-// FAQ = details;

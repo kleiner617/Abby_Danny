@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import ThingsToDo from '../../Content/Images/SectionHeaders/things_to_do_header.svg';
+import ThingsToDo from '../../Content/Images/SectionHeaders/ThingsToDo.svg';
 
 type Props = {
 	className?: string;

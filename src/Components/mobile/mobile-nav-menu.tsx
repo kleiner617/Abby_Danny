@@ -108,22 +108,23 @@ export class MobileNavMenu extends React.Component<PropsType, StateType> {
 				}
 			>
 				<Link smooth to="/#schedule" activeClassName="active" onClick={this.toggleMenu}>
-					Schedule
+					SCHEDULE
 				</Link>
-				{/* <Link smooth to="/#travel" activeClassName="active" onClick={this.toggleMenu}>
-					Travel
-				</Link> */}
 
 				<Link smooth to="/#accomodations" activeClassName="active" onClick={this.toggleMenu}>
-					Accomodations
+					ACCOMODATIONS
+				</Link>
+
+				<Link smooth to="/#accomodations" activeClassName="active" onClick={this.toggleMenu}>
+					OUR STORY
 				</Link>
 
 				<Link smooth to="/#thingsToDo" activeClassName="active" onClick={this.toggleMenu}>
-					Things to Do
+					THINGS TO DO
 				</Link>
 
-				<Link smooth to="/#faq" activeClassName="active" onClick={this.toggleMenu}>
-					FAQ
+				<Link smooth to="/#details" activeClassName="active" onClick={this.toggleMenu}>
+					DETAILS
 				</Link>
 
 				<Link to="/registry" activeClassName="active" onClick={this.toggleMenu}>

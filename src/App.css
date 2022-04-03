@@ -70,6 +70,7 @@ a:active {
 }
 
 .header {
+	display: flex;
 	background-color: white;
 }
 

@@ -70,7 +70,7 @@ const MenuHeader = (props: Props) => {
 					<TopHeaderButton className="top-button">THINGS TO DO</TopHeaderButton>{' '}
 				</StyledLink>
 
-				<StyledLink to="/#faq" smooth>
+				<StyledLink to="/#details" smooth>
 					<TopHeaderButton className="top-button">FAQ</TopHeaderButton>{' '}
 				</StyledLink>
 

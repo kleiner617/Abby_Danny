@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import styled from '@emotion/styled';
 import PhotoHeader from '../Components/mobile/photo-header-mobile';
 import ThingsToDoContainer from './things-to-do-container';
 import RegistryContainer from './registry-container';
@@ -11,6 +12,12 @@ import Footer from '../Components/footer';
 import ElegantHeader from '../Components/mobile/mobile-elegant-header';
 
 type Props = {};
+
+const HomeBlurb = styled('div')`
+	font-size: 20px;
+	width: 85%;
+	margin: 70px auto;
+`;
 
 const getDimensions = (ele: any) => {
 	const { height } = ele.getBoundingClientRect();
@@ -44,7 +51,7 @@ const MobileContainer = () => {
 	const sectionRefs = [
 		{ section: 'header', ref: headerRef },
 		{ section: 'schedule', ref: scheduleRef },
-		{ section: 'faq', ref: covidRef },
+		{ section: 'details', ref: covidRef },
 		{ section: 'thingsToDo', ref: thingsToDoRef },
 		{ section: 'accomodation', ref: accomodationRef },
 		{ section: 'registry', ref: registryRef }
@@ -87,6 +94,11 @@ const MobileContainer = () => {
 			<div className="mobile-header" ref={headerRef}>
 				<ElegantHeader />
 				<PhotoHeader />
+				<HomeBlurb>
+					Welcome! We are excited to celebrate with you on Saturday, September 10, 2022. We created this
+					website as a convienent way to share all of the important details with you leading up to our
+					wedding. You can also find things to do in the Richmond area and check out our registry.
+				</HomeBlurb>
 			</div>
 
 			<div className="content">
@@ -100,7 +112,7 @@ const MobileContainer = () => {
 					<ThingsToDoContainer isMobile={true}></ThingsToDoContainer>
 				</div>
 
-				<div className="section" id="faq" ref={covidRef}>
+				<div className="section" id="details" ref={covidRef}>
 					<FAQContainer isMobile={true}></FAQContainer>
 				</div>
 

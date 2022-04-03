@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import FAQ from '../Content/Images/SectionHeaders/faq_header.svg';
-import Heart from '../Content/Images/heart.svg';
+import FAQ from '../Content/Images/SectionHeaders/details.svg';
+import LineDivider from '../Content/Images/lines.svg';
 
 type Props = {
 	className?: string;
@@ -10,18 +10,17 @@ type Props = {
 };
 
 const TitleImage = styled.img`
-	height: 150px;
+	height: ${(props: Props): string => (props.isMobile ? `12vh` : '150px')};
 	margin-bottom: 40px;
 `;
 
 const HeartImage = styled.img`
-	margin-top: 20px;
-	margin-bottom: 20px;
-	height: 70px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	height: ${(props: Props): string => (props.isMobile ? `40px` : '70px')};
 `;
 const FAQDetails = styled('div')`
 	padding: ${(props: Props): string => (props.isMobile ? `30px 0` : '40px 0')};
-	// background-color: rgb(0, 114, 187, 0.2);
 `;
 
 const QuestionStyle = styled('div')`
@@ -53,8 +52,7 @@ export class FAQContainer extends React.PureComponent<Props> {
 	render() {
 		return (
 			<FAQDetails className={this.props.className} id={this.props.id}>
-				<TitleImage src={FAQ} alt="FAQ" />
-
+				<TitleImage src={FAQ} alt="Details" />
 				<QuestionStyle {...this.props}>
 					Will there be transportation to and from the ceremony and reception?
 				</QuestionStyle>
@@ -65,7 +63,7 @@ export class FAQContainer extends React.PureComponent<Props> {
 					garages plus street parking near the Cathedral. Valet will also be available at the Jefferson
 					beginning at 5pm.
 				</AnswerStyle>
-				<HeartImage src={Heart} />
+				<HeartImage src={LineDivider} {...this.props} />
 				<QuestionStyle {...this.props}>
 					What should we do in between the ceremony and the reception?
 				</QuestionStyle>
@@ -74,7 +72,7 @@ export class FAQContainer extends React.PureComponent<Props> {
 					hour window before cocktail hour. Richmond has lots of fun restaurants and bars where you can get a
 					quick snack or drink before joining us at 5pm. See our 'Things to Do' tab for more ideas!
 				</AnswerStyle>
-				<WatercolorStyle src={require('../Content/Images/watercolor/suit.png')} alt="Ceremony" />
+				<HeartImage src={LineDivider} {...this.props} />
 				<QuestionStyle {...this.props}>What should I wear?</QuestionStyle>
 				<AnswerStyle {...this.props}>The dress code for our wedding is Black-Tie Optional.</AnswerStyle>
 			</FAQDetails>
