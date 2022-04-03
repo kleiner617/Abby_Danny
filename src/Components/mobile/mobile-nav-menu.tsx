@@ -127,7 +127,7 @@ export class MobileNavMenu extends React.Component<PropsType, StateType> {
 					DETAILS
 				</Link>
 
-				<Link to="/registry" activeClassName="active" onClick={this.toggleMenu}>
+				<Link to="/#registry" activeClassName="active" onClick={this.toggleMenu}>
 					REGISTRY
 				</Link>
 

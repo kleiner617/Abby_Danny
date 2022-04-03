@@ -5,7 +5,6 @@ import ThingsToDoContainer from './things-to-do-container';
 import RegistryContainer from './registry-container';
 import ScheduleContainer from './schedule-container';
 import MobileNavMenu from '../Components/mobile/mobile-nav-menu';
-// import TravelContainer from './travel-container';
 import AccomodationsContainer from './accomodations_container';
 import FAQContainer from './faq-container';
 import Footer from '../Components/footer';
