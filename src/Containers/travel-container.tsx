@@ -14,7 +14,7 @@ const TitleImage = styled.img`
 `;
 
 const TravelDetails = styled('div')`
-	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
+	padding: ${(props: Props): string => (props.isMobile ? `30px 0` : '40px 0')};
 `;
 
 const Title = styled('div')`

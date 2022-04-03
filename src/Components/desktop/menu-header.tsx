@@ -56,11 +56,14 @@ const MenuHeader = (props: Props) => {
 				<StyledLink to="/#home" smooth>
 					<TopHeaderButton className="top-button">HOME</TopHeaderButton>{' '}
 				</StyledLink>
+				<StyledLink to="/#ourstory" smooth>
+					<TopHeaderButton className="top-button">OUR STORY</TopHeaderButton>
+				</StyledLink>
 				<StyledLink to="/#schedule" smooth>
 					<TopHeaderButton className="top-button">SCHEDULE</TopHeaderButton>
 				</StyledLink>
-				<StyledLink to="/#travel" smooth>
-					<TopHeaderButton className="top-button">TRAVEL</TopHeaderButton>
+				<StyledLink to="/#accomodations" smooth>
+					<TopHeaderButton className="top-button">ACCOMODATIONS</TopHeaderButton>
 				</StyledLink>
 
 				<StyledLink to="/#thingsToDo" smooth>

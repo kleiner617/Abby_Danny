@@ -3,8 +3,24 @@
 	font-family: 'Cormorant Garamond', serif;
 }
 
-a.active {
-	color: navy;
+a {
+	color: black;
+}
+a:link {
+	text-decoration: none;
+	color: black;
+}
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+	color: #0072bb;
+}
+a:active {
+	text-decoration: none;
+	color: #0072bb;
 }
 
 .sticky {

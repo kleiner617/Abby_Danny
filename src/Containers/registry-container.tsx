@@ -9,26 +9,12 @@ type Props = {
 };
 
 const RegistryDetails = styled('div')`
-	padding: ${(props: Props): string => (props.isMobile ? `80px 0` : '160px 0')};
+	padding: ${(props: Props): string => (props.isMobile ? `30px 0` : '40px 0')};
 `;
 
 const TitleImage = styled.img`
 	height: 150px;
 	margin-bottom: 20px;
-`;
-
-const Title = styled('div')`
-	font-size: ${(props: Props): string => (props.isMobile ? `42px` : '70px')};
-	margin-top: 40px;
-	padding: ${(props: Props): string => (props.isMobile ? `15px 0` : '30px 0')};
-	font-family: 'Pinyon Script', cursive;
-`;
-
-const Details = styled('div')`
-	font-size: ${(props: Props): string => (props.isMobile ? '20px' : '32px')};
-	width: ${(props: Props): string => (props.isMobile ? '89vw' : '53vw')};
-	text-align: center;
-	margin: auto;
 `;
 
 const StandAloneZola = styled('img')`
@@ -40,7 +26,7 @@ export class RegistryContainer extends React.PureComponent<Props> {
 	onClickRegistryItem = (registry: string) => {
 		switch (registry) {
 			case 'zola':
-				window.open('https://www.zola.com/registry/heatherandemily');
+				https: window.open('https://www.zola.com/registry/dannyandabby2022');
 				break;
 			default:
 				break;

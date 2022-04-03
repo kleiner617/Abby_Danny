@@ -4,7 +4,8 @@ import ThingsToDoContainer from './things-to-do-container';
 import RegistryContainer from './registry-container';
 import ScheduleContainer from './schedule-container';
 import MobileNavMenu from '../Components/mobile/mobile-nav-menu';
-import TravelContainer from './travel-container';
+// import TravelContainer from './travel-container';
+import AccomodationsContainer from './accomodations_container';
 import FAQContainer from './faq-container';
 import Footer from '../Components/footer';
 import ElegantHeader from '../Components/mobile/mobile-elegant-header';
@@ -92,8 +93,8 @@ const MobileContainer = () => {
 				<div className="section" id="schedule" ref={scheduleRef}>
 					<ScheduleContainer isMobile={true}></ScheduleContainer>
 				</div>
-				<div className="section" id="accomodation" ref={accomodationRef}>
-					<TravelContainer isMobile={true}></TravelContainer>
+				<div className="section" id="accomodations" ref={accomodationRef}>
+					<AccomodationsContainer isMobile={true}></AccomodationsContainer>
 				</div>
 				<div className="section" id="thingsToDo" ref={thingsToDoRef}>
 					<ThingsToDoContainer isMobile={true}></ThingsToDoContainer>

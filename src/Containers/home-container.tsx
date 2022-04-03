@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import PhotoHeader from '../Components/desktop/photo-header-large';
 import ScheduleContainer from './schedule-container';
-import TravelContainer from './travel-container';
+import AccomodationsContainer from './accomodations_container';
 import ThingsToDoContainer from './things-to-do-container';
 import FAQContainer from './faq-container';
 import RegistryContainer from './registry-container';
@@ -30,8 +30,13 @@ const scrollTo = (ele: any) => {
 };
 
 const HomeBlurb = styled('div')`
-	height: 1300px;
 	font-size: 24px;
+	width: 60%;
+	margin: 100px auto;
+`;
+
+const Fillertonotmessupstickyheader = styled('div')`
+	height: 75px;
 `;
 
 const HomeContainer = () => {
@@ -87,23 +92,21 @@ const HomeContainer = () => {
 		<div className="App">
 			<div className="content">
 				<div className="section" id="header" ref={headerRef}>
-					<ElegantHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
+					<StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
+					<Fillertonotmessupstickyheader />
 					<PhotoHeader />
 					<HomeBlurb>
-						This is something here about Abby and Danny wedding, blah blah..... Just need a temp placeholder
-						for now, will fill this in blah blah
+						Welcome! We are excited to celebrate with you on Saturday, September 10, 2022. We created this
+						website as a convienent way to share all of the important details with you leading up to our
+						wedding. You can also find things to do in the Richmond area and check out our registry.
 					</HomeBlurb>
 				</div>
-
-				{visibleSection !== 'header' && (
-					<StickyHeader visibleSection={visibleSection} scrollToHome={scrollToHome} />
-				)}
 
 				<div className="section" id="schedule" ref={scheduleRef}>
 					<ScheduleContainer></ScheduleContainer>
 				</div>
 				<div className="section" id="accomodations" ref={accomdationsRef}>
-					<TravelContainer></TravelContainer>
+					<AccomodationsContainer></AccomodationsContainer>
 				</div>
 				<div className="section" id="thingsToDo" ref={thingsToDoRef}>
 					<ThingsToDoContainer></ThingsToDoContainer>

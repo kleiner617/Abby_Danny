@@ -57,16 +57,6 @@ export class PhotoHeader extends React.PureComponent<Props> {
 
 					<Carousel.Item>
 						<img
-							src={require('../../Content/Images/carousel/AD_Long_5.jpg')}
-							alt="Abby and Danny at Virginia House"
-							style={{
-								width: '100%'
-							}}
-						/>
-					</Carousel.Item>
-
-					<Carousel.Item>
-						<img
 							src={require('../../Content/Images/carousel/AD_Long_6.jpg')}
 							alt="Abby and Danny at Virginia House"
 							style={{

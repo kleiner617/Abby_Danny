@@ -35,6 +35,7 @@ const styles = {
 	},
 	bmMenuWrap: {
 		position: 'fixed',
+		top: '0',
 		height: '100%',
 		width: '100%',
 		fontSize: '40px'
@@ -64,8 +65,8 @@ const styles = {
 };
 
 const MonogramImage = styled('img')`
-	height: 90px;
-	width: 90px;
+	height: 120px;
+	width: 120px;
 	margin-top: -10px;
 	display: inline-block !important;
 	margin-top: 75px;
@@ -109,9 +110,9 @@ export class MobileNavMenu extends React.Component<PropsType, StateType> {
 				<Link smooth to="/#schedule" activeClassName="active" onClick={this.toggleMenu}>
 					Schedule
 				</Link>
-				<Link smooth to="/#travel" activeClassName="active" onClick={this.toggleMenu}>
+				{/* <Link smooth to="/#travel" activeClassName="active" onClick={this.toggleMenu}>
 					Travel
-				</Link>
+				</Link> */}
 
 				<Link smooth to="/#accomodations" activeClassName="active" onClick={this.toggleMenu}>
 					Accomodations
