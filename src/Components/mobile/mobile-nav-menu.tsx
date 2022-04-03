@@ -128,12 +128,12 @@ export class MobileNavMenu extends React.Component<PropsType, StateType> {
 				</Link>
 
 				<Link to="/registry" activeClassName="active" onClick={this.toggleMenu}>
-					Registry
+					REGISTRY
 				</Link>
 
 				<Link smooth to="/" activeClassName="active" onClick={this.toggleMenu}>
 					<MonogramImage
-						src={require('../../Content/Images/A-D_navy.png')}
+						src={require('../../Content/Images/A-D_frenchBlue.png')}
 						onClick={this.props.scrollToHome}
 					/>
 				</Link>
